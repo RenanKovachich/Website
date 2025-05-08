@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    environment:
+      - REACT_APP_API_URL=http://api:3001
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=linkspace
+      - DB_USER=postgres
+      - DB_PASSWORD=your_db_password
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
+  postgres:
+    image: postgres:13-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=linkspace
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=your_db_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data: 
