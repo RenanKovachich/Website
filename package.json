@@ -88,6 +88,7 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "cross-env": "^10.1.0",
     "cypress": "^13.6.3",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.1",
