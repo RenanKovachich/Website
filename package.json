@@ -19,7 +19,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.76",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@types/recharts": "^1.8.29",
@@ -85,6 +84,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",
+    "@types/node": "^18.19.130",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react": "^4.2.1",
