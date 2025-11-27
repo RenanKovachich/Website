@@ -45,7 +45,7 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "react-scripts start",
-    "build": "set GENERATE_SOURCEMAP=false && react-scripts build",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "test": "vitest run --reporter=verbose",
     "test:ui": "vitest",
     "test:watch": "vitest --watch",
