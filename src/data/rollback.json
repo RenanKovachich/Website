@@ -1,0 +1,10 @@
+{
+  "message": "Rollback para versão anterior",
+  "steps": [
+    "1. Fazer backup dos dados atuais",
+    "2. Restaurar versão anterior do código",
+    "3. Executar rollback do banco de dados (se aplicável)",
+    "4. Verificar integridade dos dados"
+  ],
+  "warning": "Este rollback removerá todas as funcionalidades multi-tenant"
+}

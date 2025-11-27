@@ -1,0 +1,192 @@
+{
+  "empresas": [
+    {
+      "id": "1",
+      "nome": "LinkSpace",
+      "cnpj": "12.345.678/0001-90",
+      "email": "contato@linkspace.com",
+      "telefone": "(11) 99999-9999",
+      "status": "active",
+      "createdAt": "2025-10-09T02:00:07.862Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "2",
+      "nome": "TechCorp",
+      "cnpj": "98.765.432/0001-10",
+      "email": "contato@techcorp.com",
+      "telefone": "(11) 88888-8888",
+      "status": "active",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "3",
+      "nome": "Inovação Ltda",
+      "cnpj": "11.222.333/0001-44",
+      "email": "contato@inovacao.com",
+      "telefone": "(11) 77777-7777",
+      "status": "active",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Administrador LinkSpace",
+      "email": "admin@linkspace.com",
+      "password": "admin123",
+      "profile": "admin",
+      "empresaId": "1",
+      "status": "active",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "2",
+      "name": "Usuário LinkSpace",
+      "email": "user@linkspace.com",
+      "password": "user123",
+      "profile": "usuario",
+      "empresaId": "1",
+      "status": "active",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "3",
+      "name": "Admin TechCorp",
+      "email": "admin@techcorp.com",
+      "password": "admin123",
+      "profile": "admin",
+      "empresaId": "2",
+      "status": "active",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "4",
+      "name": "João Silva",
+      "email": "joao@techcorp.com",
+      "password": "joao123",
+      "profile": "usuario",
+      "empresaId": "2",
+      "status": "active",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "5",
+      "name": "Maria Santos",
+      "email": "maria@inovacao.com",
+      "password": "maria123",
+      "profile": "admin",
+      "empresaId": "3",
+      "status": "active",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    }
+  ],
+  "spaces": [
+    {
+      "id": "1",
+      "name": "Sala de Reunião 1",
+      "type": "sala_reuniao",
+      "capacity": 10,
+      "status": "active",
+      "description": "Sala de reunião para pequenos grupos com projetor e quadro branco",
+      "empresaId": "1",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "2",
+      "name": "Auditório Principal",
+      "type": "auditorio",
+      "capacity": 50,
+      "status": "active",
+      "description": "Auditório para eventos e apresentações com sistema de som",
+      "empresaId": "1",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "3",
+      "name": "Sala TechCorp",
+      "type": "coworking",
+      "capacity": 20,
+      "status": "active",
+      "description": "Espaço colaborativo TechCorp com mesas compartilhadas",
+      "empresaId": "2",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "4",
+      "name": "Laboratório Inovação",
+      "type": "escritorio",
+      "capacity": 15,
+      "status": "active",
+      "description": "Laboratório de inovação com equipamentos modernos",
+      "empresaId": "3",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "1",
+      "spaceId": "1",
+      "userId": "2",
+      "startDate": "2025-10-10T02:00:07.863Z",
+      "endDate": "2025-10-10T04:00:07.863Z",
+      "participants": 5,
+      "description": "Reunião de planejamento do projeto",
+      "status": "confirmada",
+      "empresaId": "1",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    },
+    {
+      "id": "2",
+      "spaceId": "3",
+      "userId": "4",
+      "startDate": "2025-10-11T02:00:07.863Z",
+      "endDate": "2025-10-11T05:00:07.863Z",
+      "participants": 15,
+      "description": "Workshop de desenvolvimento",
+      "status": "pendente",
+      "empresaId": "2",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    }
+  ],
+  "notificacoes": [
+    {
+      "id": "1",
+      "reservaId": "1",
+      "tipo": "confirmacao",
+      "titulo": "Reserva Confirmada",
+      "mensagem": "Sua reserva para \"Sala de Reunião 1\" foi confirmada para amanhã às 10:00.",
+      "lida": false,
+      "empresaId": "1",
+      "createdAt": "2025-10-09T02:00:07.863Z",
+      "updatedAt": "2025-10-09T02:00:07.863Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "1",
+      "userId": "1",
+      "empresaId": "1",
+      "action": "LOGIN",
+      "resource": "USER",
+      "resourceId": "1",
+      "details": {
+        "ipAddress": "127.0.0.1"
+      },
+      "createdAt": "2025-10-09T02:00:07.863Z"
+    }
+  ]
+}
