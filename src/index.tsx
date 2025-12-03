@@ -20,24 +20,42 @@ const queryClient = new QueryClient({
   },
 });
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+// Função para inicializar a aplicação
+function initApp() {
+  const rootElement = document.getElementById('root');
 
-root.render(
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={theme}>
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
-          <AuthProvider>
-            <CssBaseline />
-            <App />
-          </AuthProvider>
-        </LocalizationProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
-  </React.StrictMode>
-); 
+  if (!rootElement) {
+    console.error('Root element not found. Retrying...');
+    // Tentar novamente após um pequeno delay
+    setTimeout(initApp, 100);
+    return;
+  }
+
+  const root = ReactDOM.createRoot(rootElement);
+
+  root.render(
+    <React.StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <AuthProvider>
+              <CssBaseline />
+              <App />
+            </AuthProvider>
+          </LocalizationProvider>
+        </ThemeProvider>
+      </QueryClientProvider>
+    </React.StrictMode>
+  );
+}
+
+// Aguardar o DOM estar pronto antes de inicializar
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  // DOM já está pronto
+  initApp();
+} 
 
 // Desregistrar qualquer Service Worker antigo e limpar caches de app
 if ('serviceWorker' in navigator) {
